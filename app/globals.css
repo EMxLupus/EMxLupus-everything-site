@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root{color-scheme:dark}
+html,body{height:100%}
+body{background:#000;color:#fff}
+a{text-decoration:underline;text-decoration-color:transparent;transition:all .2s}
+a:hover{text-decoration-color:rgba(255,255,255,.4)}
