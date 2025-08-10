@@ -13,18 +13,44 @@ export default function Home() {
         </p>
 
         <div className="flex flex-wrap gap-3">
-          <a className="rounded-full border border-white/20 px-4 py-2 no-underline hover:bg-white/10"
-             href="https://dexscreener.com/base/0xc79ed9fde05a9156cf3ac2b780241063e8a39480a046cc30a97d7904d6a696c5"
-             target="_blank" rel="noopener noreferrer">View on Dexscreener ↗</a>
+          <a
+            className="rounded-full border border-white/20 px-4 py-2 no-underline hover:bg-white/10"
+            href="https://dexscreener.com/base/0xc79ed9fde05a9156cf3ac2b780241063e8a39480a046cc30a97d7904d6a696c5"
+            target="_blank" rel="noopener noreferrer"
+          >
+            View on Dexscreener ↗
+          </a>
 
-          <a href="/chart"
-             className="rounded-full border border-white/20 px-4 py-2 no-underline hover:bg-white/10">Open Chart</a>
+          <a
+            href="/chart"
+            className="rounded-full border border-white/20 px-4 py-2 no-underline hover:bg-white/10"
+          >
+            Open Chart
+          </a>
 
-          <a className="rounded-full border border-white/20 px-4 py-2 no-underline hover:bg-white/10"
-             href="https://x.com/base4everything" target="_blank" rel="noopener noreferrer">X / Twitter</a>
+          <a
+            className="rounded-full border border-white/20 px-4 py-2 no-underline hover:bg-white/10"
+            href="https://x.com/base4everything" target="_blank" rel="noopener noreferrer"
+          >
+            X / Twitter
+          </a>
 
-          <a className="rounded-full border border-white/20 px-4 py-2 no-underline hover:bg-white/10"
-             href="https://t.me/baseisforeverything" target="_blank" rel="noopener noreferrer">Telegram</a>
+          <a
+            className="rounded-full border border-white/20 px-4 py-2 no-underline hover:bg-white/10"
+            href="https://t.me/baseisforeverything" target="_blank" rel="noopener noreferrer"
+          >
+            Telegram
+          </a>
+        </div>
+
+        <div className="mt-8 w-full h-[70vh]">
+          <iframe
+            src="https://dexscreener.com/base/0xc79ed9fde05a9156cf3ac2b780241063e8a39480a046cc30a97d7904d6a696c5?embed=1&theme=dark"
+            title="Dexscreener Chart"
+            className="w-full h-full rounded-2xl border border-white/10"
+            frameBorder="0"
+            allow="clipboard-write; encrypted-media;"
+          ></iframe>
         </div>
       </section>
 
