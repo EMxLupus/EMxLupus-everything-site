@@ -1,0 +1,23 @@
+{
+  "title": "Directorio de Fundadores",
+  "searchPlaceholder": "Buscar fundadores…",
+  "results": "{count, plural, =0 {Sin resultados} one {# resultado} other {# resultados}}",
+  "sort.relevance": "Relevancia",
+  "sort.az": "A–Z",
+  "theme.system": "Sistema",
+  "theme.dark": "Oscuro",
+  "theme.light": "Claro",
+  "filters.clear": "Borrar",
+  "filters.active": "Activo",
+  "filters.quick.dev/engineer": "Dev / Ingeniero",
+  "filters.quick.product/founder": "Producto / Fundador",
+  "filters.quick.designer/artist": "Diseñador / Artista",
+  "filters.quick.research/analyst": "Investigación / Analista",
+  "filters.quick.community/raider": "Comunidad / Raider",
+  "filters.quick.content/writer": "Contenido / Escritor",
+  "filters.quick.trader/liquidity": "Trader / Liquidez",
+  "filters.quick.tool/agent": "Herramienta / Agente",
+  "filters.quick.base core": "Base Core",
+  "filters.quick.og/advisor": "OG / Asesor",
+  "empty": "Sin resultados. Prueba otra búsqueda o borra los filtros."
+}

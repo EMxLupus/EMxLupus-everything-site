@@ -1,8 +1,141 @@
+/* Tailwind layer directives */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-:root{color-scheme:dark}
-html,body{height:100%}
-body{background:#000;color:#fff}
-a{text-decoration:underline;text-decoration-color:transparent;transition:all .2s}
-a:hover{text-decoration-color:rgba(255,255,255,.4)}
+
+/* -------------------------------------------------
+   Design Tokens (nutzen wir überall via CSS vars)
+   ------------------------------------------------- */
+:root {
+  --bg:     #0B0F1A; /* background */
+  --fg:     #E6EAF2; /* foreground text */
+  --muted:  #9AA3B2; /* secondary text */
+  --brand:  #0052FF; /* primary accent (Base blue) */
+  --accent: #22FF88; /* sparingly used accent */
+}
+
+/* System prefers color-scheme dark by default, 
+   we toggeln das später via ThemeProvider */
+html { color-scheme: light dark; }
+
+/* -------------------------------------------------
+   Base styles
+   ------------------------------------------------- */
+html, body { height: 100%; }
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  /* Wir nutzen next/font in layout.tsx, die Variablen
+     --font-inter und --font-grotesk kommen von dort. */
+  font-family: var(--font-inter), ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Display-Font (Space Grotesk) – nutzbar via className="font-display" */
+.font-display { font-family: var(--font-grotesk), var(--font-inter), ui-sans-serif, system-ui; }
+.font-body    { font-family: var(--font-inter), ui-sans-serif, system-ui; }
+
+/* Links: dezente Unterstreichung erst on hover */
+a {
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: text-decoration-color 200ms ease, color 200ms ease, background-color 200ms ease, border-color 200ms ease;
+}
+a:hover { text-decoration-color: rgba(255,255,255,0.4); }
+
+/* Sichtbare Fokus-Ringe für Tastatur-Nutzer */
+:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255,255,255,0.28);
+  border-radius: 12px;
+}
+
+/* Sanfte globale Transitions für Theme-Wechsel */
+* {
+  transition: background-color 200ms ease, color 200ms ease, border-color 200ms ease;
+}
+
+/* Bilder/Medien */
+img, svg, video, canvas { display: block; max-width: 100%; }
+
+/* Utility: Scrollbar verstecken (nur wo nötig anwenden) */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Utility: Card – konsistente Kachel-Optik */
+.card {
+  @apply rounded-2xl border border-white/10 bg-white/5 shadow-sm;
+}
+
+/* Kicker/Label (kleines Uppercase-Label vor Überschriften) */
+.kicker {
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  font-size: 11px;
+  color: var(--muted);
+}
+
+/* Sanfte Schatten */
+.shadow-soft {
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+/* Section spacing helpers (Optional) */
+.section-pad { padding-block: 3rem; }
+@media (min-width: 768px) {
+  .section-pad { padding-block: 4.5rem; }
+}
+/* Sections */
+.section { padding: 3rem 0; }
+@media (min-width: 640px){ .section { padding: 4rem 0; } }
+.section-title { font-family: var(--font-grotesk); font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem); margin-bottom: 1rem; }
+
+/* Buttons / pills */
+.pill {
+  display:inline-flex; align-items:center; gap:.5rem;
+  border:1px solid rgba(255,255,255,.15);
+  background:rgba(255,255,255,.05);
+  padding:.35rem .7rem; border-radius:.8rem;
+  font-size:.8rem;
+  transition:background-color .2s, border-color .2s, color .2s;
+}
+.pill:hover { background:rgba(255,255,255,.09); }
+
+/* Smooth anchor scroll */
+html { scroll-behavior: smooth; }
+
+/* Globales Hintergrundbild (dezent) */
+body::before{
+  content:"";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image: url("/img/optimized/bg-everything.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: .10;
+  filter: saturate(.9) brightness(.75) contrast(1.05);
+}
+html:not(.dark) body::before{
+  opacity: .08;
+  filter: brightness(.98) saturate(.95);
+}
+/* --- Extras: leichte Neon/Glow Effekte --- */
+@keyframes float {
+  0% { transform: translateY(0) }
+  50% { transform: translateY(-2px) }
+  100% { transform: translateY(0) }
+}
+@keyframes pulse-glow {
+  0%,100% { box-shadow: 0 0 0 rgba(0,0,0,0) }
+  50% { box-shadow: 0 0 22px rgba(0,82,255,.25) }
+}
+
+/* optional verwendbar: .neon */
+.neon { animation: pulse-glow 2.4s ease-in-out infinite; }
+.floaty { animation: float 6s ease-in-out infinite; }
+

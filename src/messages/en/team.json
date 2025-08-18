@@ -1,0 +1,23 @@
+{
+  "title": "Founder Directory",
+  "searchPlaceholder": "Search founders…",
+  "results": "{count} results",
+  "sort": { "relevance": "Relevance", "az": "A–Z" },
+  "theme": { "system": "System", "dark": "Dark", "light": "Light" },
+  "filters": {
+    "clear": "Clear",
+    "quick": {
+      "dev/engineer": "Dev/Engineer",
+      "product/founder": "Product/Founder",
+      "designer/artist": "Designer/Artist",
+      "research/analyst": "Research/Analyst",
+      "community/raider": "Community/Raider",
+      "content/writer": "Content/Writer",
+      "trader/liquidity": "Trader/Liquidity",
+      "tool/agent": "Tool/Agent",
+      "base core": "Base Core",
+      "og/advisor": "OG/Advisor"
+    }
+  },
+  "empty": "No results. Try another search or clear filters."
+}

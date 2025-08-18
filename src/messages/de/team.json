@@ -1,0 +1,23 @@
+{
+  "title": "Founder-Verzeichnis",
+  "searchPlaceholder": "Gründer suchen…",
+  "results": "{count, plural, =0 {Keine Treffer} one {# Treffer} other {# Treffer}}",
+  "sort.relevance": "Relevanz",
+  "sort.az": "A–Z",
+  "theme.system": "System",
+  "theme.dark": "Dunkel",
+  "theme.light": "Hell",
+  "filters.clear": "Zurücksetzen",
+  "filters.active": "Aktiv",
+  "filters.quick.dev/engineer": "Dev / Engineer",
+  "filters.quick.product/founder": "Product / Founder",
+  "filters.quick.designer/artist": "Designer / Artist",
+  "filters.quick.research/analyst": "Research / Analyst",
+  "filters.quick.community/raider": "Community / Raider",
+  "filters.quick.content/writer": "Content / Writer",
+  "filters.quick.trader/liquidity": "Trader / Liquidity",
+  "filters.quick.tool/agent": "Tool / Agent",
+  "filters.quick.base core": "Base Core",
+  "filters.quick.og/advisor": "OG / Advisor",
+  "empty": "Keine Ergebnisse. Anderen Suchbegriff versuchen oder Filter löschen."
+}
