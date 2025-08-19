@@ -383,6 +383,9 @@ export const founders: Founder[] = [
   { displayName: "spiralxpanic.base.eth", handle: "spiralxpanic.base.eth", summary: "ENS on Base; community participant.", tags: ["community"], reachTier: "medium", links: {} },
   { displayName: "systemupdated.base.eth", handle: "systemupdated.base.eth", summary: "ENS on Base; fee recipient / participant.", tags: ["community"], reachTier: "medium", links: {} },
 
+// Compatibility shim for legacy imports:
+export { QUICK_FILTERS } from "./filters";
+
   // -----------------------------
   // Projekte / Protokolle (aus deiner Liste)
   // -----------------------------
@@ -400,3 +403,5 @@ export const founders: Founder[] = [
     },
   },
 ];
+
+

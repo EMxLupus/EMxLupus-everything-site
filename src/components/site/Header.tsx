@@ -44,10 +44,11 @@ export function Header() {
       >
         {/* Wordmark → Home */}
         <Link
-          href="/"
-          className="font-display text-lg tracking-wide hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-white/50 rounded px-1"
-        >
-          EVERYTHING
+   <a
+  href="/"
+  className="font-display text-lg tracking-wide hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-white/50 rounded px-1"
+>
+  EVERYTHING
         </Link>
 
         {/* Desktop nav */}
